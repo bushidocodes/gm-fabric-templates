@@ -24,9 +24,13 @@
   branch = "master"
   name = "github.com/armon/go-metrics"
 
-#[[constraint]]
-#  name = "github.com/deciphernow/gm-fabric-go"
-#  version = "0.1.1"
+# The canonical import path github.com/deciphernow/gm-fabric-go no longer
+# resolves (the deciphernow GitHub org was removed). Keep the import path the
+# generated code uses, but tell dep to fetch the source from the live fork.
+[[constraint]]
+  name = "github.com/deciphernow/gm-fabric-go"
+  branch = "master"
+  source = "github.com/bushidocodes/gm-fabric-go"
 
 [[constraint]]
   branch = "master"
